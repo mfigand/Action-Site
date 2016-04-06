@@ -1,14 +1,31 @@
-<h1>Details:</h1>
+<h4>Details:</h4>
 
-<h2><%= @product.title %></h2>
-<h2><%= @product.description %></h2>
-<h2><%= @product.deadline %></h2>
+<table class="highlight">
+  <thead>
+    <tr>
+        <th data-field="id">Title</th>
+        <th data-field="name">Description</th>
+        <th data-field="price">Deadline</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @product.title %></td>
+      <td><%= @product.description %></td>
+      <td><%= @product.deadline %></td>
+    </tr>
+  </tbody>
+</table>
 
 <%= render "partials/form_review"%>
 
+<blockquote>
 
-<%= link_to("New Bid", new_product_bid_path(@product)) %>
-<br>
-<%= link_to("Actual Bids", product_bids_path(@product)) %>
-<br>
-<%= link_to("Back", products_path(@user)) %>
+  <%= link_to("New Bid", new_product_bid_path(@product)) %>
+  <br>
+  <%= link_to("Actual Bids", product_bids_path(@product)) %>
+  <br>
+  <%= link_to("Back", products_path(@user)) %>
+
+</blockquote>

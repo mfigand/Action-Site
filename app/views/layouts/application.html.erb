@@ -5,23 +5,51 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 offset-s1">
 
-  <header>
-    <h1>AUCTION SITE</h1>
+        <header>
+          <h1 class="head_title">AUCTION SITE <i class="material-icons">trending_up</i></h1>
+          <%= render "partials/form"%>
+        </header>
 
-    <%= render "partials/form"%>
+        <%= yield %>
 
-  </header>
+    </div>
+  </div>
+</div>
 
-<%= yield %>
 
-<footer>
-  <br>
-  _____________________
-  <br>
-  Copyright 2016 | Ironhack
+
+<footer class="page-footer main">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Copyright 2016 | By Manuel Figueroa</h5>
+        <p class="grey-text text-lighten-4">This is a action site where you can create, products, bids and reviews.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/mfigand">Github</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://es.linkedin.com/in/manuelfigueroaandrade">Linkedin</a></li>
+          <li><a class="grey-text text-lighten-3" href="http://vfatito.wix.com/mfigand-blog">My blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2016 | Ironhack colaboration
+    </div>
+  </div>
 </footer>
 
 </body>

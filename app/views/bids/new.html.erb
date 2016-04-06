@@ -12,7 +12,7 @@
 <% end %>
 
 <%= form_for  [@product, @bid] do |f| %>
-  <%= f.label :user_id %>
+  <%= f.label :user_email %>
   <%= f.text_field :user_id %>
   <br>
   <%= f.label :amount %>
@@ -20,4 +20,3 @@
   <br>
   <%= f.submit 'Save' %>
 <% end %>
-

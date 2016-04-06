@@ -1,17 +1,24 @@
-<h1>Users:</h1>
-<ul>
-  <% @users.each do |user| %>
-    
-    <li> <%= "#{user.name} - " %> <%= "#{user.email}" %>
-    <%= link_to("Edit", edit_user_path(user)) %>  
-    <%= link_to("Create Product", new_user_product_path(user)) %>  
-    </li>
+<h4>Users:</h4>
+<table class="highlight">
+  <thead>
+    <tr>
+        <th data-field="id">Name</th>
+        <th data-field="name">Email</th>
+        <th data-field="price">Action</th>
+    </tr>
+  </thead>
 
-
-  <% end %>
-</ul>
-
-
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= link_to("Edit", edit_user_path(user)) %> /
+      <%= link_to("Create product", new_user_product_path(user)) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to("Add new user", new_user_path) %>
 <br>

@@ -1,16 +1,24 @@
-<h1><%= current_user.name %>´s All Products:</h1>
-<ul>
-  <% @products.each do |product| %>
+<% if current_user %>
 
-    <li> <%= "#{product.title} - #{product.description} - #{product.deadline}" %>
-    <%= link_to("Edit", edit_user_product_path(product.user_id, product)) %>
-    <%= link_to("View", user_product_path(product.user_id, product)) %>
+  <h4><%= current_user.name %>´s All Products:</h4>
 
-    </li>
+  <ul class="collapsible" data-collapsible="accordion">
+    <% @products.each do |product| %>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">info</i><%= product.title %></div>
+        <div class="collapsible-body"><p><%= product.description %> - Deadline: <%= product.deadline %>
+          <%= link_to("Edit", edit_user_product_path(product.user_id, product)) %> /
+          <%= link_to("View", user_product_path(product.user_id, product)) %>
+        </p></div>
+      </li>
+    <% end %>
+  </ul>
 
 
-  <% end %>
-</ul>
+  <%= link_to("Back", "/") %>
 
+<% else %>
 
-<%= link_to("Back", "/") %>
+<h4>There are no products yet</h4>
+
+<% end %>

@@ -1,8 +1,12 @@
-<%= form_for [current_user, @product, @review] do |f| %>
+<div class="input-field">
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <br>
-  <%= f.submit 'Save' %>
+  <%= form_for [current_user, @product, @review] do |f| %>
 
-<% end %>
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "validate" %>
+    <br>
+    <%= f.submit 'Save' %>
+
+  <% end %>
+  
+</div>
