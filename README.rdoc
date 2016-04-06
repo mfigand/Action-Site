@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This App it's a action site.
 
-Things you may want to cover:
+Allows you to :
 
-* Ruby version
+* Create, Edit and Update Users, Products, Bids and Reviews.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Use postgres as DB, so You may need to run the server before using whit this
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
