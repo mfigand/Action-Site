@@ -1,6 +1,6 @@
 == README
 
-This App it's a action site.
+This App it's an action site.
 
 Allows you to :
 
